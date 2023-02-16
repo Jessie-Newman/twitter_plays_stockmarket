@@ -86,6 +86,7 @@ def is_private(sym):
 def parse_tweet(text):
     words = [word for word in text.split(" ") if "@" not in word]
     
+    # Goddam am I loving PEP 634
     match words:
         case ["portfolio", *_]:
             return "portfolio", None, None
