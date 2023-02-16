@@ -112,7 +112,8 @@ def post_tweets(client, texts, reply_to):
         )
         print(response)        
         reply_to = response.data['id']
-        
+       
+ ### Main loop
  def run(client):
     response = client.get_users_mentions(USER_ID, max_results=MAX_RESULTS)
     portfolio, handled_ids = read_json()
